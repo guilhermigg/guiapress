@@ -1,13 +1,19 @@
 <%- include ('partials/header.ejs') %>
 
-<%- include ('partials/navbar.ejs') %>
+<%- include ('partials/homenavbar.ejs') %>
 
 <body>
+    <div class="container"> 
 
+         <% articles.forEach(article => {  %>
+                <div class="card-header">
+                     <h2><%= article.title %></h2>
+                </div>
 
-        <h1>Guia Press</h1>
- 
- 
+                <div class="card-body">
+                </div>                                                      
+         <% }) %>              
+    </div>
 </body>
 
 <%- include ('partials/footer.ejs') %>

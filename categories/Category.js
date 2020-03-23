@@ -13,6 +13,7 @@ const Category = connection.define('categories', {
     }
 })
 
-Category.sync({force: true});  // recria a tabela toda vez que executar a aplicação
+//Category.sync({force: true});  // recria a tabela toda vez que executar a aplicação
 
 module.exports = Category;
+
