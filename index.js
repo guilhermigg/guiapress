@@ -33,14 +33,14 @@ connection
 
 // Database
 
-app.get("/", categoriesControler);
-app.get("/", articlesControler);
-
 app.get("/", (req, res) => {
     Article.findAll().then(articles => {
         res.render("index", {articles: articles});
    });
 })
+
+app.use("/", categoriesControler);
+app.use("/", articlesControler);
 
 app.listen(5000, () => {
     console.log("Servidor rodando!")
